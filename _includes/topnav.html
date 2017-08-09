@@ -4,7 +4,7 @@
       {% if site.avatar contains "://" %}
         <img src="{{ site.avatar }}" alt="{{ site.name }}">
       {% else %}
-        <img src="{{ site.avatar | absolute_url }}" alt="{{ site.name }}">
+        <img src="{{ site.baseurl}}{{ site.avatar }}" alt="{{ site.name }}">
       {% endif %}
     </div>
   {% endif %}
