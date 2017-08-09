@@ -1,12 +1,12 @@
-     <h3 class="page__item-title" itemprop="headline">
-      <a href="{{ site.baseurl}}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-      <a href="{{ site.baseurl}}{{ post.url  }}" rel="permalink">{{ post.title }}</a>
-       {% endif %}
-     </h3>
- 
-     {% if post.date %}
-     <p class="page__meta"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }} </time></p>
-     {% endif %}
-   </article>
+<h3 class="page__item-title" itemprop="headline">
+ <a href="{{ site.baseurl}}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+ <a href="{{ site.baseurl}}{{ post.url  }}" rel="permalink">{{ post.title }}</a>
+  {% endif %}
+</h3>
+
+{% if post.date %}
+<p class="page__meta"> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }} </time></p>
+{% endif %}
+</article>
 </div> 
 </div>
