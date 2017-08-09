@@ -21,8 +21,8 @@
 
     <!-- For all browsers -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Heebo:100,300,400,500,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | absolute_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl}}{{ site.favicon | absolute_url }}">
     <meta http-equiv="cleartype" content="on">
   </head>
 
@@ -36,10 +36,10 @@
       </footer>
     </div>
     
-    <script src="{{ '/assets/js/plugins/jquery-1.12.4.min.js' | absolute_url }}"></script>
-    <script src="{{ '/assets/js/plugins/rrssb.min.js' | absolute_url }}"></script>
-    <script src="{{ '/assets/js/slimmenu.js' | absolute_url }}"></script>
-    <script src="{{ '/assets/js/main.js' | absolute_url }}"></script>
+    <script src="{{ site.baseurl}}{{ '/assets/js/plugins/jquery-1.12.4.min.js' | absolute_url }}"></script>
+    <script src="{{ site.baseurl}}{{ '/assets/js/plugins/rrssb.min.js' | absolute_url }}"></script>
+    <script src="{{ site.baseurl}}{{ '/assets/js/slimmenu.js' | absolute_url }}"></script>
+    <script src="{{ site.baseurl}}{{ '/assets/js/main.js' | absolute_url }}"></script>
     {% include analytics.html %}
 
   </body>
