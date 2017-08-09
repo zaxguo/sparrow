@@ -2,8 +2,6 @@
   {% if site.avatar %}
     <div class="topnav__avatar">
       {% if site.avatar contains "://" %}
-        <img src="{{ site.avatar }}" alt="{{ site.name }}">
-      {% else %}
         <img src="{{ site.baseurl}}{{ site.avatar }}" alt="{{ site.name }}">
       {% endif %}
     </div>
