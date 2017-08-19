@@ -9,7 +9,7 @@ avatar                   : "/assets/images/bird.png"
 #url                      : "https://theconfused.me" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 url                      : "https://zaxguo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : "/blog" # the subpath of your site, e.g. "/blog" leave blank if no subpath
-baseurl                  : "" # the subpath of your site, e.g. "/blog" leave blank if no subpath
+baseurl                  : "/" # the subpath of your site, e.g. "/blog" leave blank if no subpath
 
 theme: sparrow-jekyll-theme
 
