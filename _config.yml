@@ -11,6 +11,8 @@ url                      : "https://zaxguo.github.io" # the base hostname & prot
 #baseurl                  : "/blog" # the subpath of your site, e.g. "/blog" leave blank if no subpath
 baseurl                  : "" # the subpath of your site, e.g. "/blog" leave blank if no subpath
 
+theme: sparrow-jekyll-theme
+
 # Site Author
 author:
   name                   : "Liwei Guo" # appears in the footer and atom feed
