@@ -7,7 +7,7 @@ Hi, I'm currently a Ph.D. student working with Prof. [Felix Xiaozhu Lin](https:/
 My past projects span from **kernel**, **driver**, to **binary translation** and other userland approaches. 
 I'm particularly intrigued by the complexity of computer systems and the endeavour of builting them. 
 
-#Publication
+# Publication
 *	[HotMobile’17] "Decelerating Suspend and Resume in OS," Shuang Zhai, **Liwei Guo**, Xiangyu Li, and Felix Xiaozhu Lin, in Proc. ACM Int. Workshop on Mobile Computing Systems and Applications, 2017.	
 
 Besides research, I enjoy: 
