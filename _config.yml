@@ -123,3 +123,9 @@ defaults:
     values:
       layout: post
       share: false
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: post
+      share: false

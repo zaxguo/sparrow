@@ -83,6 +83,9 @@ collections:
   poetry:
     output: true
     permalink: /:collection/:title/
+  gallery:
+    output: true
+    permalink: /:collection/:title/
   
 
 # Plugins
