@@ -4,8 +4,6 @@ title: Photos
 subtitle: Through lens I see the world as it is.
 ---
 
-{% for post in paginator.posts %}
-	{% include post-entry.html %}
-{% endfor %}
 
-{% include paginator.html %}
+
+
