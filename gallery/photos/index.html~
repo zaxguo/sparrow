@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Photos 
-subtitle: Through lens see
+subtitle: Through lens I see the world as it is.
 ---
 
 {% for post in paginator.posts %}

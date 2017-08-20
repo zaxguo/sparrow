@@ -83,6 +83,7 @@ collections:
   poetry:
     output: true
     permalink: /:collection/:title/
+  
 
 # Plugins
 gems:
