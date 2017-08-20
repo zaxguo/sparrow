@@ -74,11 +74,12 @@ sass:
 
 # Outputting
 permalink: /blog/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: "/blog/page:num/"
 timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 collections:
+#   _poetry
   poetry:
     output: true
     permalink: /:collection/:title/
