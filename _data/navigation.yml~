@@ -7,9 +7,9 @@ main:
   - title: "gallery"
     url: /gallery
     children: 
-      - title: "photos"
+      - title: "item 1"
         url: /404
-      - title: "clips"
+      - title: "item 2"
         url: /404
   - title: "subscribe"
     url: /feed.xml
