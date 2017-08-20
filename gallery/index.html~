@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Poetry: a collection"
+title: "Gallery"
 permalink: /gallery/
-subtitle: You can write your own subtitle here, to tell people what your collection is about
+subtitle: A collection of non-technial random thoughts 
 ---
 
 {% for post in site.poetry reversed %}
