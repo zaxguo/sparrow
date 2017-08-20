@@ -8,7 +8,7 @@ main:
     url: /gallery
     children: 
       - title: "photos"
-        url: /404
+        url: /gallery/photos
       - title: "clips"
         url: /404
   - title: "subscribe"
