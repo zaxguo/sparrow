@@ -5,6 +5,6 @@ permalink: /gallery/
 subtitle: A collection of non-technial random thoughts 
 ---
 
-{% for post in site.poetry reversed %}
+{% for post in site.gallery reversed %}
   {% include post-entry.html %}
 {% endfor %}
