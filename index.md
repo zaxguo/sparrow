@@ -10,6 +10,7 @@ I'm particularly intrigued by the complexity of computer systems and the endeavo
 
 ---
 # Publication
+*	[Eurosys’18] "Power Sandbox: Redefining Power Awareness", **Liwei Guo**, **Tiantu Xu**, Mengwei Xu, Xuanzhe Liu and Felix Xiaozhu Lin, in Proc. ACM European Conference on Computer Systems 2018 (to appear).	
 *	[HotMobile’17] "Decelerating Suspend and Resume in OS", Shuang Zhai, **Liwei Guo**, Xiangyu Li, and Felix Xiaozhu Lin, in Proc. ACM Int. Workshop on Mobile Computing Systems and Applications, 2017.	
 
 ---
