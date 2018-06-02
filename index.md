@@ -7,7 +7,7 @@ Hi, I'm currently a Ph.D. student working with Prof. [Felix Xiaozhu Lin](https:/
 
 My past projects span from **kernel**, **driver**, to **binary translation** and other userland approaches. 
 I'm particularly intrigued by the complexity of computer systems and the endeavour of building them. 
-
+<div id="visualization"></div>
 ---
 # Publication
 *	[Eurosys’18] "Power Sandbox: Power Awareness Redefined", **Liwei Guo**, **Tiantu Xu**, Mengwei Xu, Xuanzhe Liu and Felix Xiaozhu Lin, in Proc. ACM European Conference on Computer Systems 2018 (to appear). (**Liwei** and **Tiantu** are Co-primary authors)
