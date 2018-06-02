@@ -11,7 +11,7 @@
     <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
   
-  	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{{ site.baseurl}}{{ '/assets/js/vis.js' }}"></script>
 	<link href="{{ site.baseurl}}{{ '/assets/css/vis-timeline-graph2d.min.css' }}" rel="stylesheet" type="text/css" />
 
@@ -36,6 +36,10 @@
     {{ content }}
 
 
+	<!-- Conf ddl timeline -->
+	<p> Major systems conference ddl </p>
+	<div id="visualization"></div>
+
 	<script type="text/javascript">
 	  // DOM element where the Timeline will be attached
 	  var container = document.getElementById('visualization');
@@ -56,9 +60,8 @@
 	  // Create a Timeline
 	  var timeline = new vis.Timeline(container, items, options);
 	</script>
-	<!-- Conf ddl timeline -->
-	<p> Major systems conference ddl </p>
-	<div id="visualization"></div>
+
+
     <div class="page__footer">
       <footer>
         <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Built using <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="http://github.com/lingxz/sparrow" rel="nofollow">Sparrow theme</a> with <span class="page__footer-heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>.</div>
