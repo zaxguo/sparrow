@@ -25,6 +25,17 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
 
+    <!-- For all browsers -->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Heebo:100,300,400,500,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl}}{{ site.favicon}}">
+    <meta http-equiv="cleartype" content="on">
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    {{ content }}
+
 	<script>
 	  // create a couple of HTML items in various ways
 
@@ -61,17 +72,6 @@
 	  var options = {};
 	  var timeline = new vis.Timeline(container, items, options);
 	</script>
-    <!-- For all browsers -->
-    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Heebo:100,300,400,500,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl}}{{ site.favicon}}">
-    <meta http-equiv="cleartype" content="on">
-  </head>
-
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-
-    {{ content }}
-
 	<!-- Conf ddl timeline -->
 	<p> Major systems conference ddl </p>
 	<div id="visualization"></div>
