@@ -10,6 +10,11 @@
 
     <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
+  
+  	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  	<script src="../assets/js/vis.js"></script>
+  	<link href="../assets/css/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -19,6 +24,42 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
 
+	<script>
+	  // create a couple of HTML items in various ways
+
+	  var item1 = document.createElement('div');
+	  item1.appendChild(document.createTextNode('item 1'));
+
+	  var item2 = document.createElement('div');
+	  item2.innerHTML = '<span>item 2</span>';
+
+	  var item3 = document.createElement('div');
+	  var span3 = document.createElement('span');
+	  span3.className = 'large';
+	  span3.appendChild(document.createTextNode('item 3'));
+	  item3.appendChild(span3);
+
+	  var item4 = 'item <span class="large">4</span>';
+
+	  var item5 = document.createElement('div');
+	  item5.appendChild(document.createTextNode('item 5'));
+	  item5.appendChild(document.createElement('br'));
+	  var img5 = document.createElement('img');
+	  img5.src = '../resources/img/attachment-icon.png';
+	  img5.style.width = '48px';
+	  img5.style.height = '48px';
+	  item5.appendChild(img5);
+
+	  var item6 = 'item6<br><img src="../resources/img/comments-icon.png" style="width: 48px; height: 48px;">';
+
+	  var item7 = 'item7<br><a href="http://visjs.org" target="_blank">click here</a>';
+
+	  // create data and a Timeline
+	  var container = document.getElementById('visualization');
+
+	  var options = {};
+	  var timeline = new vis.Timeline(container, items, options);
+	</script>
     <!-- For all browsers -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Heebo:100,300,400,500,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css">
@@ -30,6 +71,8 @@
 
     {{ content }}
 
+	<!-- Conf ddl timeline -->
+	<div id="visualization"></div>
     <div class="page__footer">
       <footer>
         <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Built using <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="http://github.com/lingxz/sparrow" rel="nofollow">Sparrow theme</a> with <span class="page__footer-heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>.</div>
