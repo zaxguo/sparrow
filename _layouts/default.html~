@@ -73,7 +73,6 @@
     {{ content }}
 
 	<!-- Conf ddl timeline -->
-	<p> Major systems conference ddl </p>
 	<div id="visualization"></div>
     <div class="page__footer">
       <footer>
