@@ -36,23 +36,42 @@
     {{ content }}
 
 
-	<!-- Conf ddl timeline -->
-	<p> Major systems conference ddl </p>
-
+	<!-- rendering conference ddl -->
 	<script type="text/javascript">
 	  // DOM element where the Timeline will be attached
 	  var container = document.getElementById('visualization');
 
 	  // Create a DataSet (allows two way data-binding)
-	  var items = new vis.DataSet([
-		{id: 1, content: 'item 1', start: '2014-04-20'},
-		{id: 2, content: 'item 2', start: '2014-04-14'},
-		{id: 3, content: 'item 3', start: '2014-04-18'},
-		{id: 4, content: 'item 4', start: '2014-04-16', end: '2014-04-19'},
-		{id: 5, content: 'item 5', start: '2014-04-25'},
-		{id: 6, content: 'item 6', start: '2014-04-27', type: 'point'}
-	  ]);
-
+		var items = new vis.DataSet([{id: 1, content: ICS, start: '2018-01-18'},
+		{id: 2, content: CF, start: '2018-01-21'},
+		{id: 3, content: HPDC, start: '2018-01-24'},
+		{id: 4, content: SIGCOMM, start: '2018-01-31'},
+		{id: 5, content: ATC, start: '2018-02-06'},
+		{id: 6, content: Usenix Security, start: '2018-02-08'},
+		{id: 7, content: ISMM, start: '2018-02-15'},
+		{id: 8, content: Euro Par, start: '2018-02-16'},
+		{id: 9, content: SIGMETRICS, start: '2018-02-19'},
+		{id: 10, content: HotCloud, start: '2018-03-13'},
+		{id: 11, content: HotStorage, start: '2018-03-15'},
+		{id: 12, content: SC, start: '2018-03-28'},
+		{id: 13, content: ICPP, start: '2018-03-30'},
+		{id: 14, content: MICRO, start: '2018-04-06'},
+		{id: 15, content: MASCOTS, start: '2018-04-11'},
+		{id: 16, content: PACT, start: '2018-04-15'},
+		{id: 17, content: OOPSLA, start: '2018-04-16'},
+		{id: 18, content: OSDI, start: '2018-05-03'},
+		{id: 19, content: CCS, start: '2018-05-08'},
+		{id: 20, content: SoCC, start: '2018-05-15'},
+		{id: 21, content: Middleware, start: '2018-05-18'},
+		{id: 22, content: IISWC, start: '2018-05-18'},
+		{id: 23, content: APSys, start: '2018-05-31'},
+		{id: 24, content: HiPEAC, start: '2018-06-01'},
+		{id: 25, content: CoNEXT, start: '2018-06-22'},
+		{id: 26, content: ASPLOS, start: '2018-08-07'},
+		{id: 27, content: NSDI, start: '2018-09-20'},
+		{id: 28, content: FAST, start: '2018-09-26'},
+		{id: 29, content: EuroSys, start: '2018-10-01'},
+		]);
 	  // Configuration for the Timeline
 	  var options = {};
 
