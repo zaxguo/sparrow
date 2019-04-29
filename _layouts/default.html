@@ -15,7 +15,7 @@
     <script src="{{ site.baseurl}}{{ '/assets/js/vis.js' }}"></script>
     <script src="{{ site.baseurl}}{{ '/assets/js/instafeed.min.js' }}"></script>
 	<link href="{{ site.baseurl}}{{ '/assets/css/vis-timeline-graph2d.min.css' }}" rel="stylesheet" type="text/css" />
-	<link href="{{ site.baseurl}}{{ '/assets/css/instafeed.css' }}" rel="stylesheet" type="text/css" />
+	<link href="{{ site.baseurl}}{{ '/assets/css/instafeed.scss' }}" rel="stylesheet" type="text/css" />
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
@@ -83,6 +83,7 @@
 			userId: 3687296285, 
 			resolution: 'standard_resolution',
 			limit: 9,
+			template:'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>',
 			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
 		});
 		feed.run();
