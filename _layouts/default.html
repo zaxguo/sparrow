@@ -97,7 +97,9 @@
 			  $(image).addClass('animated flipInX');
 			});
 			},
-			template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">{{caption}}</div></a>',			
+			{% raw %}
+			template: '<a href="{{link}}" target="_blank"><img src="{{image}}"/><div class="likes">{{caption}}</div></a>',			
+			{% endraw %}
 			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
 		});
 		feed.run();
