@@ -1,40 +1,33 @@
-.instagram-wrap {
-  background: #eeeeee;
+#instafeed a {
+  padding:5px 5px 1px 5px;
+  margin:10px;
+  border:1px solid #e1e1e1;
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
 }
 
-.instagram-content h3 {
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  font-size: 12px;
-  font-weight: 700;
-  text-align: center;
-  padding: 50px 0;
-  color: #bbbbbb;
+#instafeed .likes {
+  background:rgba(113,199,236,0.8);
+  font-family:sans-serif;
+  font-size:1.5em;
+  position:absolute;
+  color:#ffffff;
+  right:5px;
+  bottom:5px;
+  left:5px;
+  opacity:0;
+  text-align:center;
+  line-height:100px;
+  text-shadow:0 1px rgba(0,0,0,0.5);
+  -webkit-font-smoothing:antialiased;
+  -webkit-transition: opacity 100ms ease;
+	-moz-transition: opacity 100ms ease;
+	-o-transition: opacity 100ms ease;
+	-ms-transition: opacity 100ms ease;
+	transition: opacity 100ms ease;
 }
-.instagram-content .photo-box {
-  margin: 0 0 30px 0;
-}
-.instagram-content .photo-box .image-wrap img {
-  width: 100%;
-}
-.instagram-content .photo-box .image-wrap .likes {
-  position: absolute;
-  bottom: 5px;
-  left: 15px;
-  padding: 5px;
-  background: black;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-}
-.instagram-content .photo-box .description {
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  background: white;
-  color: #9b9b9b;
-  letter-spacing: 1px;
-  padding: 15px;
-  height: 75px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+
+#instafeed a:hover .likes {
+  opacity:1;
 }

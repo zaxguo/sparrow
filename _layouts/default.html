@@ -18,7 +18,7 @@
 	<script src="{{ site.baseurl }}{{ '/assets/js/bootstrap.js' }}"></script>
 	<link href="{{ site.baseurl}}{{ '/assets/css/vis-timeline-graph2d.min.css' }}" rel="stylesheet" type="text/css" />
 	<link href="{{ site.baseurl}}{{ '/assets/css/instafeed.css' }}" rel="stylesheet" type="text/css" />
-	<link href="{{ site.baseurl}}{{ '/assets/css/style.css' }}" rel="stylesheet" type="text/css" />
+
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
@@ -85,9 +85,20 @@
 			get: 'user',
 			userId: 3687296285, 
 			resolution: 'standard_resolution',
-			limit: 9,
- 			template: '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"><div class="photo-box"><div class="image-wrap"><a href="{{link}}"><img src="{{image}}"></a><div class="likes">{{likes}} Likes</div></div><div class="description">{{caption}}<div class="date">{{model.date}}</div></div></div></div>',
-			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
+			limit:9,
+      after: function () {
+    var images = $("#instafeed").find('a');
+    $.each(images, function(index, image) {
+      var delay = (index * 75) + 'ms';
+      $(image).css('-webkit-animation-delay', delay);
+      $(image).css('-moz-animation-delay', delay);
+      $(image).css('-ms-animation-delay', delay);
+      $(image).css('-o-animation-delay', delay);
+      $(image).css('animation-delay', delay);
+      $(image).addClass('animated flipInX');
+    });
+  },
+  template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">{{caption}}</div></a>',			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
 		});
 		feed.run();
 	</script>
