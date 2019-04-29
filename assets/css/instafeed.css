@@ -1,57 +1,40 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-#instafeed {
-  width: 100%;
-  display: flex;
+.instagram-wrap {
+  background: #eeeeee;
 }
-#instafeed a {
-  position: relative;
-  width: 50%;
-}
-@media only screen and (min-width: 580px) {
-  #instafeed a {
-    width: 25%;
-  }
-}
-#instafeed a img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#instafeed a div.footer {
-  width: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: .5rem 1rem;
-  background: rgba(30, 144, 255, 0.8);
-  font-size: .8rem;
-  font-family: 'Open Sans', sans-serif;
-  color: white;
+
+.instagram-content h3 {
   text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 50px 0;
+  color: #bbbbbb;
 }
-#instafeed a div.footer img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  margin-right: .5rem;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+.instagram-content .photo-box {
+  margin: 0 0 30px 0;
 }
-#instafeed a div.user {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.instagram-content .photo-box .image-wrap img {
+  width: 100%;
 }
-#instafeed a div.caption {
-  height: 0;
-  opacity: 0;
-  margin-bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  word-break: break-all;
+.instagram-content .photo-box .image-wrap .likes {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  padding: 5px;
+  background: black;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
 }
-#instafeed a:hover .caption, #instafeed a:focus .caption {
-  margin: -.5rem -1rem .5rem;
-  padding: .5rem 1rem;
-  opacity: 1;
-  height: auto;
+.instagram-content .photo-box .description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background: white;
+  color: #9b9b9b;
+  letter-spacing: 1px;
+  padding: 15px;
+  height: 75px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

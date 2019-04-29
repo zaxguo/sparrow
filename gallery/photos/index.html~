@@ -4,7 +4,10 @@ title: Photos
 subtitle: Through lens I see the world as it is.
 ---
 
-{% include figure image_path="/assets/images/purdue.jpg" alt="Purdue University" caption="Purdue bathing in twilight" %}
+<div id="instafeed"></div>
+
+{% include figure image_path="/assets/images/purdue.jpg" alt="Purdue University" caption="Purdue bathin twilight" %}
+
 
 
 

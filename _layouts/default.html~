@@ -10,11 +10,12 @@
 
     <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-  
-  	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  	<script src="/assets/js/vis.js"></script>
+	<!-- lwg: add my own scripts.. -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{{ site.baseurl}}{{ '/assets/js/vis.js' }}"></script>
+    <script src="{{ site.baseurl}}{{ '/assets/js/instafeed.min.js' }}"></script>
 	<link href="{{ site.baseurl}}{{ '/assets/css/vis-timeline-graph2d.min.css' }}" rel="stylesheet" type="text/css" />
+	<link href="{{ site.baseurl}}{{ '/assets/css/instafeed.scss' }}" rel="stylesheet" type="text/css" />
 
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
@@ -25,42 +26,6 @@
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
     </script>
 
-	<script>
-	  // create a couple of HTML items in various ways
-
-	  var item1 = document.createElement('div');
-	  item1.appendChild(document.createTextNode('item 1'));
-
-	  var item2 = document.createElement('div');
-	  item2.innerHTML = '<span>item 2</span>';
-
-	  var item3 = document.createElement('div');
-	  var span3 = document.createElement('span');
-	  span3.className = 'large';
-	  span3.appendChild(document.createTextNode('item 3'));
-	  item3.appendChild(span3);
-
-	  var item4 = 'item <span class="large">4</span>';
-
-	  var item5 = document.createElement('div');
-	  item5.appendChild(document.createTextNode('item 5'));
-	  item5.appendChild(document.createElement('br'));
-	  var img5 = document.createElement('img');
-	  img5.src = '../resources/img/attachment-icon.png';
-	  img5.style.width = '48px';
-	  img5.style.height = '48px';
-	  item5.appendChild(img5);
-
-	  var item6 = 'item6<br><img src="../resources/img/comments-icon.png" style="width: 48px; height: 48px;">';
-
-	  var item7 = 'item7<br><a href="http://visjs.org" target="_blank">click here</a>';
-
-	  // create data and a Timeline
-	  var container = document.getElementById('visualization');
-
-	  var options = {};
-	  var timeline = new vis.Timeline(container, items, options);
-	</script>
     <!-- For all browsers -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Heebo:100,300,400,500,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="{{ site.baseurl}}/assets/css/main.css">
@@ -72,8 +37,58 @@
 
     {{ content }}
 
-	<!-- Conf ddl timeline -->
-	<div id="visualization"></div>
+
+	<!-- rendering conference ddl -->
+	<script type="text/javascript">
+	  // DOM element where the Timeline will be attached
+	  var container = document.getElementById('visualization');
+
+	  // Create a DataSet (allows two way data-binding)
+		var items = new vis.DataSet([
+				{id: 1, content: "ATC", start: "2019-01-10"},
+				{id: 2, content: "ICDCS", start: "2019-01-12"},
+				{id: 3, content: "CF", start: "2019-01-14"},
+				{id: 4, content: "HotOS", start: "2019-01-17"},
+				{id: 5, content: "HPDC", start: "2019-01-23"},
+				{id: 6, content: "SIGCOMM", start: "2019-01-31"},
+				{id: 7, content: "ICS", start: "2019-02-01"},
+				{id: 8, content: "SIGMETRICS", start: "2019-02-11"},
+				{id: 9, content: "Euro Par", start: "2019-02-15"},
+				{id: 10, content: "Usenix Security", start: "2019-02-15"},
+				{id: 11, content: "ISMM", start: "2019-02-22"},
+				{id: 12, content: "HotCloud", start: "2019-03-06"},
+				{id: 13, content: "SYSTOR", start: "2019-03-07"},
+				{id: 14, content: "HotStorage", start: "2019-03-13"},
+				{id: 15, content: "OOPSLA", start: "2019-04-05"},
+				{id: 16, content: "MICRO", start: "2019-04-05"},
+				{id: 17, content: "SC", start: "2019-04-10"},
+				{id: 18, content: "ICPP", start: "2019-04-15"},
+				{id: 19, content: "PACT", start: "2019-04-15"},
+				{id: 20, content: "SOSP", start: "2019-04-24"},
+				{id: 21, content: "CCS", start: "2019-05-15"},
+				{id: 22, content: "Middleware", start: "2019-05-17"},
+				{id: 23, content: "SoCC", start: "2019-06-10"}
+		]);
+
+	   // Configuration for the Timeline
+	  var options = {};
+
+	  // Create a Timeline
+	  var timeline = new vis.Timeline(container, items, options);
+	</script>
+
+	<script type="text/javascript">
+		var feed = new Instafeed({
+			get: 'user',
+			userId: 3687296285, 
+			resolution: 'standard_resolution',
+			limit: 9,
+			template:'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>',
+			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
+		});
+		feed.run();
+	</script>
+
     <div class="page__footer">
       <footer>
         <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Built using <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="http://github.com/lingxz/sparrow" rel="nofollow">Sparrow theme</a> with <span class="page__footer-heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>.</div>
