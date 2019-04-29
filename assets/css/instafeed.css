@@ -1,0 +1,30 @@
+
+html, 
+body {
+  margin: 10px;
+  padding: 10px;
+  background: darken(whitesmoke, 10%);
+}
+#instafeed {
+  max-width:1080px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    background: white;
+    @media only screen and (min-width: $lg) {
+      width: 25%;
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
