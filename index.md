@@ -27,7 +27,7 @@ Besides research, I mostly enjoy:
 *	Playing video games which ignited my original passion for computers since I was six
 (Diamond in [Legue of Legends](), Platinum in [Overwatch]()).
 Check out my game clips [here](placeholder)!
-*	Phtography. I record my life by shooting photos. Check out my (*awsome*) photos [here](placeholder)!
+*	Phtography. I record my life by shooting photos. Check out my (*awsome*) photos [here](gallery/photos)!
 
 ---
 
