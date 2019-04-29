@@ -11,5 +11,5 @@ codekit-config.json
 Gemfile.lock
 node_modules
 npm-debug.log*
-
+*~
 
