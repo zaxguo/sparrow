@@ -5,7 +5,7 @@ main:
   - title: "blog"
     url: /blog
   - title: "gallery"
-    url: /gallery
+    url: /gallery/photos
     children: 
       - title: "photos"
         url: /gallery/photos

@@ -3,8 +3,16 @@ layout: page
 title: Photos 
 subtitle: Through lens I see the world as it is.
 ---
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+		userId: 3687296285, 
+        clientId: 'c6ef1f0c362c4c19b610f34f349767e3'
+    });
+    feed.run();
+</script>
 
-{% include figure image_path="/assets/images/purdue.jpg" alt="Purdue University" caption="Purdue bathed in twilight" %}
+{% include figure image_path="/assets/images/purdue.jpg" alt="Purdue University" caption="Purdue bathin twilight" %}
 
 
 
