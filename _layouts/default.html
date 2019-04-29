@@ -84,7 +84,7 @@
 			get: 'user',
 			userId: 3687296285, 
 			resolution: 'standard_resolution',
-			limit:1,
+			limit:9,
 			after: function () {
 			var images = $("#instafeed").find('a');
 			$.each(images, function(index, image) {
@@ -97,7 +97,7 @@
 			  $(image).addClass('animated flipInX');
 			});
 			},
-			//template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">{{caption}}</div></a>',			
+			template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /><div class="likes">{{caption}}</div></a>',			
 			accessToken: '3687296285.1677ed0.dca4f2cf81494f8d8f92e3d0db4d09b7'
 		});
 		feed.run();
